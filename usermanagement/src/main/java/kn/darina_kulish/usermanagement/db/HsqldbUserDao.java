@@ -10,17 +10,31 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.sql.Date;
 
-import kn.dmytro_grazhevskiy.usermanagement.User;
+import kn.darina_kulish.usermanagement.User;
 
-public class HsqldbUserDao implements UserDao {
+ class HsqldbUserDao implements UserDao {
 
 private static final String SELECT_ALL_QUERY = "SELECT id, firstname, lastname, dateofbirth FROM users";
 private static final String INSERT_QUERY = "INSERT INTO users(firstname, lastname, dateofbirth) VALUES (?, ?, ?)";
 private ConnectionFactory connectionFactory;
 
 
+public HsqldbUserDao() {
+	//super();
+}
+
 public HsqldbUserDao(ConnectionFactory connectionFactory) {
 	//super();
+	this.connectionFactory = connectionFactory;
+}
+
+
+	public ConnectionFactory getConnectionFactory() {
+	return connectionFactory;
+}
+
+
+public void setConnectionFactory(ConnectionFactory connectionFactory) {
 	this.connectionFactory = connectionFactory;
 }
 
