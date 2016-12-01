@@ -2,6 +2,7 @@ package kn.darina_kulish.usermanagement.db;
 
 import static org.junit.Assert.*;
 
+import java.util.Collection;
 import java.util.Date;
 
 import org.dbunit.DatabaseTestCase;
@@ -50,11 +51,19 @@ public class HsqldbUserDaoTest extends DatabaseTestCase {
 
 		@Override
 		protected IDatabaseConnection getConnection() throws Exception {
-			connectionFactory=new ConnectionFactoryImpl();
+			connectionFactory=new ConnectionFactoryImpl( "org.hsqldb.jdbcDriver", "jdbc:hsqldb:file:db/usermanagement", "sa", "");
 			return new DatabaseConnection(connectionFactory.createConnection()) ;
-			
 		}
-
+public void testFindAll(){
+	try {
+		Collection collection = dao.findAll();
+		  assertNotNull("Collection is null", collection);
+          assertEquals("Collection size.", 2, collection.size());
+	} catch (DatabaseException e) {
+		e.printStackTrace();
+		fail(e.toString());
+	}
+}
 		@Override
 		protected IDataSet getDataSet() throws Exception {
 		IDataSet dataSet = new XmlDataSet(getClass().getClassLoader().getResourceAsStream("usersDataSet.xml"));
