@@ -1,10 +1,18 @@
-package kn.darina_kulish.usermanagement.db;
+package kn.dmytro_grazhevskiy.usermanagement.db;
 
 import java.util.Collection;
 
-import kn.darina_kulish.usermanagement.User;
+import kn.dmytro_grazhevskiy.usermanagement.User;
 
 public class HsqldbUserDao implements UserDao {
+
+private ConnectionFactory connectionFactory;
+
+
+public HsqldbUserDao(ConnectionFactory connectionFactory) {
+	//super();
+	this.connectionFactory = connectionFactory;
+}
 
 
 	public User create(User user) throws DatabaseException {

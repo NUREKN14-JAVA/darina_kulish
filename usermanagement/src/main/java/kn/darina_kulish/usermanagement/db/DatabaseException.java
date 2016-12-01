@@ -1,4 +1,4 @@
-package kn.darina_kulish.usermanagement.db;
+package kn.dmytro_grazhevskiy.usermanagement.db;
 
 public class DatabaseException extends Exception {
 

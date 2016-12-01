@@ -1,4 +1,4 @@
-оpackage kn.darina_kulish.usermanagement.db;
+package kn.dmytro_grazhevskiy.usermanagement.db;
 
 import static org.junit.Assert.*;
 
@@ -8,15 +8,18 @@ import org.junit.Before;
 import org.junit.Test;
 
 import junit.framework.TestCase;
-import kn.darina_kulish.usermanagement.User;
+import kn.dmytro_grazhevskiy.usermanagement.User;
 
 public class HsqldbUserDaoTest extends TestCase {
 
-	 HsqldbUserDao dao;
+	 private HsqldbUserDao dao;
+	 private ConnectionFactory connectionFactory;
+	 
 		@Before
 		protected void setUp() throws Exception {
 			super.setUp();
-			dao = new HsqldbUserDao();
+			connectionFactory=new ConnectionFactoryImpl();
+			dao = new HsqldbUserDao(connectionFactory);
 			
 		}
 
