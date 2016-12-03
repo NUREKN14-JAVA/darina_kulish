@@ -2,7 +2,7 @@ Testsuite: kn.darina_kulish.usermanagement.db.HsqldbTest
 Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 sec
 
 	Caused an ERROR
-kn.darina_kulish.usermanagement.db.HsqldbTest
+kn.darina_kulish1.usermanagement.db.HsqldbTest
 java.lang.ClassNotFoundException: kn.darina_kulish.usermanagement.db.HsqldbTest
 	at java.net.URLClassLoader.findClass(Unknown Source)
 	at java.lang.ClassLoader.loadClass(Unknown Source)
