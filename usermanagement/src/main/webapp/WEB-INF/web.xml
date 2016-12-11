@@ -7,17 +7,17 @@
 
     <servlet>
         <servlet-name>Browse Servlet</servlet-name>
-        <servlet-class>kn.darina_kulish.usermanagement.web.BrowseServlet</servlet-class>
+        <servlet-class>kn.dmytro_grazhevskiy.usermanagement.web.BrowseServlet</servlet-class>
     </servlet>
     
     <servlet>
         <servlet-name>Add Servlet</servlet-name>
-        <servlet-class>kn.darina_kulish.usermanagement.web.AddServlet</servlet-class>
+        <servlet-class>kn.dmytro_grazhevskiy.usermanagement.web.AddServlet</servlet-class>
     </servlet>
 
     <servlet>
         <servlet-name>Edit Servlet</servlet-name>
-        <servlet-class>kn.darina_kulish.usermanagement.web.EditServlet</servlet-class>
+        <servlet-class>kn.dmytro_grazhevskiy.usermanagement.web.EditServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
