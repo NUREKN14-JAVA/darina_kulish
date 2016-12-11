@@ -37,7 +37,7 @@
     
      <servlet>
         <servlet-name>Details Servlet</servlet-name>
-        <servlet-class>kn.darina_kulish.web.DetailsServlet</servlet-class>
+        <servlet-class>kn.dmytro_grazhevskiy.usermanagement.web.DetailsServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
